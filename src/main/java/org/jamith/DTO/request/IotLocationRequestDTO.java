@@ -7,10 +7,10 @@ import java.io.Serializable;
 
 @Data
 public class IotLocationRequestDTO implements Serializable {
-    private String deviceId;
-    private int vehicleSpeed;
-    private boolean trafficLightStatus;
-    private double latitude;
-    private double longitude;
+    private Long deviceId;
+    private Double vehicleSpeed;
+//    private boolean trafficLightStatus;
+    private Double latitude;
+    private Double longitude;
 
 }
