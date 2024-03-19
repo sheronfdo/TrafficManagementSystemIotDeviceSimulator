@@ -1,7 +1,9 @@
 package org.jamith.simulation;
 
 import org.jamith.DTO.request.DeviceRegistrationRequestDTO;
+import org.jamith.DTO.request.GetRegisteredDeviceDTO;
 import org.jamith.DTO.response.DeviceRegistrationResponseDTO;
+import org.jamith.DTO.response.DeviceResponseListDTO;
 import org.jamith.remote.IotDevice;
 import org.jamith.util.VehicleType;
 
@@ -24,6 +26,14 @@ public class DeviceRegistration {
             System.out.println(deviceRegistrationResponseDTO.getDeviceId());
             System.out.println(deviceRegistrationResponseDTO.getDescription());
         }
+    }
+
+    public void getRegisteredDevices(Long count){
+        GetRegisteredDeviceDTO getRegisteredDeviceDTO = new GetRegisteredDeviceDTO();
+        getRegisteredDeviceDTO.setLimit(count);
+        IotDevice iotDevice = IotConnection.iotDevice;
+        DeviceResponseListDTO deviceRegistrationResponseDTO = iotDevice.getRegisteredDeviceList(getRegisteredDeviceDTO);
+
     }
 
 
