@@ -6,6 +6,7 @@ import org.jamith.DTO.response.DeviceRegistrationResponseDTO;
 import org.jamith.DTO.response.IotLocationResponseDTO;
 import org.jamith.remote.IotDevice;
 import org.jamith.simulation.DeviceRegistration;
+import org.jamith.simulation.DeviceRoute;
 import org.jamith.simulation.IotConnection;
 
 import javax.naming.*;
@@ -13,9 +14,11 @@ import javax.naming.*;
 public class Main {
     public static void main(String[] args) {
         try {
-            DeviceRegistration deviceRegistration = new DeviceRegistration();
-            deviceRegistration.registerNewDevice(5);
+//            DeviceRegistration deviceRegistration = new DeviceRegistration();
+//            deviceRegistration.getRegisteredDevices(5l);
 
+            DeviceRoute deviceRoute = new DeviceRoute();
+            deviceRoute.routeSimulate();
 
 
 
