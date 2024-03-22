@@ -12,5 +12,4 @@ public class IotLocationRequestDTO implements Serializable {
 //    private boolean trafficLightStatus;
     private Double latitude;
     private Double longitude;
-
 }

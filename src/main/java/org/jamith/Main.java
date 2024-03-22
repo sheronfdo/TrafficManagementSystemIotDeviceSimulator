@@ -1,42 +1,27 @@
 package org.jamith;
 
-import org.jamith.DTO.request.DeviceRegistrationRequestDTO;
-import org.jamith.DTO.request.IotLocationRequestDTO;
-import org.jamith.DTO.response.DeviceRegistrationResponseDTO;
-import org.jamith.DTO.response.IotLocationResponseDTO;
-import org.jamith.remote.IotDevice;
 import org.jamith.simulation.DeviceRegistration;
 import org.jamith.simulation.DeviceRoute;
-import org.jamith.simulation.IotConnection;
-
-import javax.naming.*;
+import org.jamith.simulation.TrafficLightOperator;
 
 public class Main {
     public static void main(String[] args) {
         try {
-//            DeviceRegistration deviceRegistration = new DeviceRegistration();
-//            deviceRegistration.getRegisteredDevices(5l);
+            DeviceRegistration deviceRegistration = new DeviceRegistration();
+//            deviceRegistration.registerNewDevice(100);
+            deviceRegistration.getRegisteredDevices(100l);
 
-            DeviceRoute deviceRoute = new DeviceRoute();
-            deviceRoute.routeSimulate();
+            Thread deviceThread = new Thread(new DeviceRoute());
+            deviceThread.start();
 
 
+            TrafficLightOperator trafficLightOperator = new TrafficLightOperator();
+//            trafficLightOperator.addTrafficLight();
+            trafficLightOperator.getTrafficLight();
+            trafficLightOperator.setTrafficLightStatus();
+            System.out.println("traffic light simulate started");
 
 
-//            DeviceRegistrationRequestDTO deviceRegistrationRequestDTO = new DeviceRegistrationRequestDTO();
-//            deviceRegistrationRequestDTO.setVehicleName("alto");
-//            deviceRegistrationRequestDTO.setVehicleType("car");
-//            DeviceRegistrationResponseDTO deviceRegistrationResponseDTO = iotDevice.registrationIotDevice(deviceRegistrationRequestDTO);
-//            System.out.println(deviceRegistrationResponseDTO.getDeviceId());
-//            System.out.println(deviceRegistrationResponseDTO.getDescription());
-//
-//            IotLocationRequestDTO iotLocationRequestDTO = new IotLocationRequestDTO();
-//            iotLocationRequestDTO.setDeviceId(deviceRegistrationResponseDTO.getDeviceId());
-//            iotLocationRequestDTO.setLatitude(0.0);
-//            iotLocationRequestDTO.setLongitude(0.0);
-//            iotLocationRequestDTO.setVehicleSpeed(50.0);
-//            IotLocationResponseDTO iotLocationResponseDTO = iotDevice.collectIotDeviceLocation(iotLocationRequestDTO);
-//            System.out.println(iotLocationResponseDTO.getDescription());
         } catch (Exception e) {
             e.printStackTrace();
         }

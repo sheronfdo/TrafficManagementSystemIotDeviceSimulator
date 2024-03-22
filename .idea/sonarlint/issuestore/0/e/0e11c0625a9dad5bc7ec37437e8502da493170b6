@@ -1,0 +1,14 @@
+
+œ	java:S116"URename this field "CHARACTERS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜’Ğàøÿÿÿÿ8Ûá…Äå1J$39e66949-173b-45d8-8789-e65da9266154
+i
+java:S1170"!Make this final field static too.(˜’Ğàøÿÿÿÿ8Üá…Äå1J$73b9490e-2851-472f-bd70-8e9f94d2f9eb
+f
+java:S2119"Save and re-use this "Random".(ä£Ï‰ûÿÿÿÿ8àá…Äå1J$6743bb10-8438-461e-a85d-a52e848c9be4
+m	java:S106"+Replace this use of System.out by a logger.(«ËÊû8áá…Äå1J$2982ae9c-ba68-4a1c-b091-64acd8b0adeb
+r	java:S106"+Replace this use of System.out by a logger.(Şğûÿÿÿÿ8áá…Äå1J$1a3623df-468d-4a39-8308-6de20b41a532
+™
+java:S1854#"QRemove this useless assignment to local variable "deviceRegistrationResponseDTO".(¬ä¹¹ıÿÿÿÿ8œ²‡Äå1J$d81a053a-3a5b-4f26-aa64-3866ced90f7d
+Š
+java:S1481#"BRemove this unused "deviceRegistrationResponseDTO" local variable.(¬ä¹¹ıÿÿÿÿ8²‡Äå1J$394210b7-8af9-4e8e-a878-404f5c500efc
+`
+java:S2119*"Save and re-use this "Random".(¼İÅf8ãá…Äå1J$4eeb661f-9a6c-4909-8686-1ea67595be99

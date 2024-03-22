@@ -15,7 +15,7 @@ public class DeviceRegistration {
     VehicleType[] vehicleTypes = VehicleType.values();
 
     public void registerNewDevice(long count) {
-        IotDevice iotDevice = IotConnection.iotDevice;
+        IotDevice iotDevice = BeanConnection.iotDevice;
         for (int i = 0; i < count; i++) {
             VehicleType vehicleType = vehicleTypes[new Random().nextInt(vehicleTypes.length)];
             String vehicleName = generateRandomString(12);
@@ -31,7 +31,7 @@ public class DeviceRegistration {
     public void getRegisteredDevices(Long count){
         GetRegisteredDeviceDTO getRegisteredDeviceDTO = new GetRegisteredDeviceDTO();
         getRegisteredDeviceDTO.setLimit(count);
-        IotDevice iotDevice = IotConnection.iotDevice;
+        IotDevice iotDevice = BeanConnection.iotDevice;
         DeviceResponseListDTO deviceResponseListDTO = iotDevice.getRegisteredDeviceList(getRegisteredDeviceDTO);
         DeviceList.deviceResponseDTOS = deviceResponseListDTO.getDeviceResponseDTOS();
         System.out.println(DeviceList.deviceResponseDTOS);
