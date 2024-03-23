@@ -100,7 +100,7 @@ class DeviceRouteRunner implements Runnable {
                 }
                 iotLocationRequestDTO.setLatitude(RouteAttribute.attributes[i][0]);
                 iotLocationRequestDTO.setLongitude(RouteAttribute.attributes[i][1]);
-                iotLocationRequestDTO.setVehicleSpeed(20.0);
+                iotLocationRequestDTO.setVehicleSpeed(30.0);
                 updateLocation(iotLocationRequestDTO);
                 try {
                     Thread.sleep(1000);
@@ -128,7 +128,7 @@ class DeviceRouteRunner implements Runnable {
                 }
                 iotLocationRequestDTO.setLatitude(RouteAttribute.attributes[i][0]);
                 iotLocationRequestDTO.setLongitude(RouteAttribute.attributes[i][1]);
-                iotLocationRequestDTO.setVehicleSpeed(5.0);
+                iotLocationRequestDTO.setVehicleSpeed(25.0);
                 updateLocation(iotLocationRequestDTO);
                 try {
                     Thread.sleep(1000);
